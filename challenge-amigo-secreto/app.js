@@ -12,7 +12,7 @@ const agregarAmigo = () => {
   document.getElementById("amigo").value = "";
   nombre.focus();
   console.log(nombre.value);
-};
+}
 
 const mostrarAmigos = () => {
   let amigosList = document.getElementById("listaAmigos");
@@ -20,7 +20,7 @@ const mostrarAmigos = () => {
   amigos.forEach((amigo) => {
     amigosList.innerHTML += `<li>${amigo}</li>`;
   });
-};
+}
 
 const sortearAmigo = () => {
     if (amigos.length < 2) {
@@ -29,7 +29,7 @@ const sortearAmigo = () => {
     }
   let amigoSorteado = amigos[Math.floor(Math.random() * amigos.length)];
   document.getElementById("resultado").innerHTML = amigoSorteado;
-};
+}
 
 const snackbar = (mensaje) => {
   let snackbarElement = document.getElementById("snackbar");
@@ -38,4 +38,4 @@ const snackbar = (mensaje) => {
   setTimeout(function () {
     snackbarElement.className = snackbarElement.className.replace("show", "");
   }, 3000);
-};
+}
